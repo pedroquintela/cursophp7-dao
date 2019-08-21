@@ -12,10 +12,22 @@ echo json_encode($usuarios);
 
 require_once("config.php");
 
-$root = new Usuario();
+// CARREGA UM USUÁRIO
+//$root = new Usuario();
+//$root->loadbyId(3);
+//echo $root;
 
-$root->loadbyId(3);
+//CARREGA UMA LISTA DE USUARIOS
+//$lista = Usuario::getList();
+//echo json_encode($lista);
 
-echo $root;
+//CARREGA UMA LISTA DE USUARIOS BUSCANDO PELO LOGIN
+//$search = Usuario::search("jo");
+//echo json_encode($search);
+
+//carrega um usuario usando o login e a senha
+$usuario = new Usuario();
+$usuario->login("Jose", "!@#$%");
+echo $usuario;
 
 ?>
